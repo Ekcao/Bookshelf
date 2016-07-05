@@ -3,7 +3,6 @@ var {dialog} = require('electron').remote;
 'use-strict';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -13,7 +12,7 @@ import '../public/css/app.css';
 
 const muiTheme = getMuiTheme();
 
-class App extends React.Component {
+export default class App extends React.Component {
     setLibraryDirectory () {
         dialog.showOpenDialog({
             properties: ['openDirectory']
@@ -37,8 +36,3 @@ class App extends React.Component {
         );
     }
 }
-
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);

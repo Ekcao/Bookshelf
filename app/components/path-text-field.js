@@ -13,12 +13,16 @@ export default class PathTextField extends React.Component {
     render () {
         return (
             <div>
+
                 <TextField
                     hintText="Path"
                     floatingLabelText="Set directory for Bookshelf library"
                     floatingLabelFixed={true}
-                />
-            <Link to="/index"><OkButton/></Link>
+                    />
+                
+                <Link to="/index">
+                    <OkButton/>
+                </Link>
             </div>
         );
     }

@@ -10,7 +10,8 @@ export default class OkButton extends React.Component {
     render () {
         return (
             <RaisedButton
-                label="OK"/>
+                label="OK"
+                onClick={this.props.onClick}/>
         );
     }
 }

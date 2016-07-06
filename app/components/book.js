@@ -15,6 +15,7 @@ export default class Book extends React.Component {
                 <CardMedia className="book-cover">
                     <img src={this.props.bookCover}/>
                 </CardMedia>
+
                 <CardHeader
                     className="book-header"
                     title={this.props.bookTitle}

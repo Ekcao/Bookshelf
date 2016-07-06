@@ -1,12 +1,15 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
-import Index from './index';
-import Setup from './setup';
+import App from './containers/app';
+import Index from './containers/home';
+import Setup from './containers/setup';
 
 export default (
     <Router history={hashHistory}>
-        <Route path="/" component={Setup}/>
-        <Route path="/index" component={Index}/>
+        <Route path="/" component={App}>
+            <IndexRoute component={Setup}/>
+            <Route path="/index" component={Index}/>
+        </Route>
     </Router>
 );

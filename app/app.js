@@ -1,38 +1,13 @@
-var {dialog} = require('electron').remote;
-
-'use-strict';
-
 import React from 'react';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
+import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
 
-import Book from './components/book'
-import '../public/css/app.css';
+import Index from './index.js';
+import Setup from './setup.js';
 
-const muiTheme = getMuiTheme();
-
-export default class App extends React.Component {
-    setLibraryDirectory () {
-        dialog.showOpenDialog({
-            properties: ['openDirectory']
-        });
-    }
-
-    render() {
-        return (
-            <MuiThemeProvider muiTheme={muiTheme}>
-                <div id="app-root">
-                    <Book
-                        bookTitle="Mistborn: The Final Empire"
-                        bookAuthor="Brandon Sanderson"
-                        bookCover="https://upload.wikimedia.org/wikipedia/en/4/44/Mistborn-cover.jpg"/>
-                    <RaisedButton
-                        style={{margin: 8}}
-                        label="Set Directory"
-                        onClick={this.setLibraryDirectory.bind(this)}/>
-                </div>
-            </MuiThemeProvider>
-        );
-    }
-}
+ReactDOM.render((
+    <Router history={hashHistory}>
+        <Route path="/" component={Setup}/>
+        <Route path="/index" component={Index}/>
+    </Router>
+), document.getElementById('root'));

@@ -20808,7 +20808,7 @@
 
 	var _home2 = _interopRequireDefault(_home);
 
-	var _setup = __webpack_require__(455);
+	var _setup = __webpack_require__(453);
 
 	var _setup2 = _interopRequireDefault(_setup);
 
@@ -34064,7 +34064,7 @@
 
 
 	// module
-	exports.push([module.id, "\r\n", ""]);
+	exports.push([module.id, "body {\n    margin: 0px;\n    width: 100%;\n    height: 100%;\n    background-color: #607D8B;\n}\n\n.book {\n    display: inline-block;\n    margin: 8px;\n    width: 175px;\n    vertical-align: top;\n}\n\n.book-cover {\n    height: auto;\n}\n\n.book-header > div {\n    padding-right: 0px !important;\n}\n", ""]);
 
 	// exports
 
@@ -34458,8 +34458,6 @@
 	var _getMuiTheme = __webpack_require__(233);
 
 	var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
-
-	__webpack_require__(453);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -39318,46 +39316,6 @@
 /* 453 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(454);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(402)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./book.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./book.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 454 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(401)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".book {\r\n    display: inline-block;\r\n    margin: 8px;\r\n    width: 175px;\r\n    vertical-align: top;\r\n}\r\n\r\n.book-cover {\r\n    height: auto;\r\n}\r\n\r\n.book-header > div {\r\n    padding-right: 0px !important;\r\n}\r\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 455 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -39374,7 +39332,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _pathTextField = __webpack_require__(456);
+	var _pathTextField = __webpack_require__(454);
 
 	var _pathTextField2 = _interopRequireDefault(_pathTextField);
 
@@ -39412,7 +39370,7 @@
 	exports['default'] = Setup;
 
 /***/ },
-/* 456 */
+/* 454 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39429,7 +39387,7 @@
 
 	var _reactRouter = __webpack_require__(170);
 
-	var _TextField = __webpack_require__(457);
+	var _TextField = __webpack_require__(455);
 
 	var _TextField2 = _interopRequireDefault(_TextField);
 
@@ -39437,7 +39395,7 @@
 
 	var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
 
-	var _okButton = __webpack_require__(465);
+	var _okButton = __webpack_require__(463);
 
 	var _okButton2 = _interopRequireDefault(_okButton);
 
@@ -39503,7 +39461,7 @@
 	};
 
 /***/ },
-/* 457 */
+/* 455 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39513,7 +39471,7 @@
 	});
 	exports.default = undefined;
 
-	var _TextField = __webpack_require__(458);
+	var _TextField = __webpack_require__(456);
 
 	var _TextField2 = _interopRequireDefault(_TextField);
 
@@ -39522,7 +39480,7 @@
 	exports.default = _TextField2.default;
 
 /***/ },
-/* 458 */
+/* 456 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39561,23 +39519,23 @@
 
 	var _transitions2 = _interopRequireDefault(_transitions);
 
-	var _deprecatedPropType = __webpack_require__(459);
+	var _deprecatedPropType = __webpack_require__(457);
 
 	var _deprecatedPropType2 = _interopRequireDefault(_deprecatedPropType);
 
-	var _EnhancedTextarea = __webpack_require__(460);
+	var _EnhancedTextarea = __webpack_require__(458);
 
 	var _EnhancedTextarea2 = _interopRequireDefault(_EnhancedTextarea);
 
-	var _TextFieldHint = __webpack_require__(462);
+	var _TextFieldHint = __webpack_require__(460);
 
 	var _TextFieldHint2 = _interopRequireDefault(_TextFieldHint);
 
-	var _TextFieldLabel = __webpack_require__(463);
+	var _TextFieldLabel = __webpack_require__(461);
 
 	var _TextFieldLabel2 = _interopRequireDefault(_TextFieldLabel);
 
-	var _TextFieldUnderline = __webpack_require__(464);
+	var _TextFieldUnderline = __webpack_require__(462);
 
 	var _TextFieldUnderline2 = _interopRequireDefault(_TextFieldUnderline);
 
@@ -40091,7 +40049,7 @@
 	exports.default = TextField;
 
 /***/ },
-/* 459 */
+/* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40118,7 +40076,7 @@
 	}
 
 /***/ },
-/* 460 */
+/* 458 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40139,7 +40097,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactEventListener = __webpack_require__(461);
+	var _reactEventListener = __webpack_require__(459);
 
 	var _reactEventListener2 = _interopRequireDefault(_reactEventListener);
 
@@ -40342,7 +40300,7 @@
 	exports.default = EnhancedTextarea;
 
 /***/ },
-/* 461 */
+/* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40509,7 +40467,7 @@
 	exports.default = EventListener;
 
 /***/ },
-/* 462 */
+/* 460 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40590,7 +40548,7 @@
 	exports.default = TextFieldHint;
 
 /***/ },
-/* 463 */
+/* 461 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40707,7 +40665,7 @@
 	exports.default = TextFieldLabel;
 
 /***/ },
-/* 464 */
+/* 462 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40842,7 +40800,7 @@
 	exports.default = TextFieldUnderline;
 
 /***/ },
-/* 465 */
+/* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40857,7 +40815,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RaisedButton = __webpack_require__(466);
+	var _RaisedButton = __webpack_require__(464);
 
 	var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
@@ -40916,7 +40874,7 @@
 	};
 
 /***/ },
-/* 466 */
+/* 464 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40926,7 +40884,7 @@
 	});
 	exports.default = undefined;
 
-	var _RaisedButton = __webpack_require__(467);
+	var _RaisedButton = __webpack_require__(465);
 
 	var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
@@ -40935,7 +40893,7 @@
 	exports.default = _RaisedButton2.default;
 
 /***/ },
-/* 467 */
+/* 465 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

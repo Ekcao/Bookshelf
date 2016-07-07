@@ -1,1 +1,21 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #607D8B;
+}
 
+.book {
+    display: inline-block;
+    margin: 8px;
+    width: 175px;
+    vertical-align: top;
+}
+
+.book-cover {
+    height: auto;
+}
+
+.book-header > div {
+    padding-right: 0px !important;
+}

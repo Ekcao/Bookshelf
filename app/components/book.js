@@ -2,8 +2,6 @@ import React from 'react';
 import {Card, CardHeader, CardMedia, CardTitle} from 'material-ui/Card';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import '../../public/css/book.css';
-
 export default class Book extends React.Component {
     getChildContext() {
         return {muiTheme: getMuiTheme()};

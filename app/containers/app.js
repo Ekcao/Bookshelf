@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { ipcRenderer } from 'electron';
 
 import AppToolbar from '../components/app-toolbar';
 
@@ -24,3 +25,8 @@ export default class App extends React.Component {
 App.childContextTypes = {
     muiTheme: React.PropTypes.object.isRequired,
 }
+
+ipcRenderer.send('read setting', 'test');
+ipcRenderer.on('setting read', (event, arg) => {
+    console.log(arg);
+});

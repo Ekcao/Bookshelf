@@ -5,7 +5,7 @@ import { ipcRenderer } from 'electron';
 
 import AppToolbar from '../components/AppToolbar';
 
-import '../../public/css/app.css';
+import '../../public/css/app.scss';
 
 export default class App extends React.Component {
     getChildContext() {

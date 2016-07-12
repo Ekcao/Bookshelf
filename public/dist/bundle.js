@@ -34441,8 +34441,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./app.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./app.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -34460,7 +34460,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n    margin: 0px;\n    width: 100%;\n    height: 100%;\n}\n\n.book {\n    display: inline-block;\n    margin: 8px;\n    width: 175px;\n    vertical-align: top;\n}\n\n.book-cover {\n    height: auto;\n}\n\n.book-header > div {\n    padding-right: 0px !important;\n}\n\n#library-bar {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n#library-bar > .library-bar-text-field {\n    margin-right: 8px;\n}\n", ""]);
+	exports.push([module.id, "body {\n  margin: 0px;\n  width: 100%;\n  height: 100%; }\n\n.book {\n  display: inline-block;\n  margin: 8px;\n  width: 175px;\n  vertical-align: top; }\n  .book .book-cover {\n    height: auto; }\n  .book .book-header div span {\n    width: 146px;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden; }\n\n#library-bar {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n  #library-bar .library-bar-text-field {\n    margin-right: 8px; }\n", ""]);
 
 	// exports
 

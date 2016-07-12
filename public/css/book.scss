@@ -1,0 +1,21 @@
+@mixin ellipsize($width) {
+    width: $width;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.book {
+    display: inline-block;
+    margin: 8px;
+    width: 175px;
+    vertical-align: top;
+
+    .book-cover {
+        height: auto;
+    }
+
+    .book-header div span {
+        @include ellipsize(146px);
+    }
+}

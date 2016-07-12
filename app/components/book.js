@@ -3,9 +3,6 @@ import {Card, CardHeader, CardMedia, CardTitle} from 'material-ui/Card';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export default class Book extends React.Component {
-    getChildContext() {
-        return {muiTheme: getMuiTheme()};
-    }
 
     render() {
         return (
@@ -21,9 +18,4 @@ export default class Book extends React.Component {
             </Card>
         );
     }
-}
-
-// For testing
-Book.childContextTypes = {
-    muiTheme: React.PropTypes.object.isRequired,
 }

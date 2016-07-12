@@ -4,26 +4,16 @@ import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Book from '../app/components/book.js';
+import Book from '../app/components/Book';
 
 
 describe('<Book />', () => {
     var wrapper = null;
 
-    before(function() {
-        wrapper = mount(
+    beforeEach(function() {
+        wrapper = shallow(
             <Book bookTitle="Mistborn" bookAuthor="Sanderson" />
         );
-    });
-
-    it('has title and author props', () => {
-        expect(wrapper.props().bookTitle).to.equal("Mistborn");
-    });
-
-    it('can change title or author props', () => {
-        expect(wrapper.props().bookTitle).to.equal("Mistborn");
-        wrapper.setProps({ bookTitle: 'Mistborn: The Final Empire' });
-        expect(wrapper.props().bookTitle).to.equal("Mistborn: The Final Empire");
     });
 
     it('displays more info onclick', () => {

@@ -3,12 +3,9 @@ import { Link } from 'react-router';
 import TextField from 'material-ui/TextField';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import OkButton from './ok-button';
+import OkButton from './OkButton';
 
 export default class LibraryBar extends React.Component {
-    getChildContext() {
-        return {muiTheme: getMuiTheme()};
-    }
 
     render () {
         return (
@@ -19,15 +16,10 @@ export default class LibraryBar extends React.Component {
                     floatingLabelText="Set directory for Bookshelf library"
                     floatingLabelFixed={true}
                     />
-                <Link to="/index">
+                <Link to="/book-list">
                     <OkButton />
                 </Link>
             </div>
         );
     }
-}
-
-// For testing
-LibraryBar.childContextTypes = {
-    muiTheme: React.PropTypes.object.isRequired,
 }

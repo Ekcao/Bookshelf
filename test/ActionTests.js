@@ -12,15 +12,32 @@ describe('Actions', () => {
         });
 
         it('must have title', () => {
-            var action = addBook(null, 'Brandon Sanderson');
-            expect(action.title).to.not.exist;
-            expect(action.type).to.equal('ERROR');
+            expect(() => addBook(null, 'Brandon Sanderson')).to.throw('Null title');
         });
 
         it('can have no author', () => {
             var action = addBook('Mistborn', null);
             expect(action.author).to.equal('');
             expect(action.type).to.equal('ADD_BOOK');
+        });
+    });
+
+    describe('removeBook', () => {
+        it('removes a book using index', () => {
+            var action = removeBook(0);
+            expect(action.type).to.equal('REMOVE_BOOK');
+        })
+    });
+
+    describe('sortBooks', () => {
+        it('passes this test', () => {
+            expect(true).to.be.true;
+        })
+    });
+
+    describe('filterBooks', () => {
+        it('passes this test', () => {
+            expect(true).to.be.true;
         });
     });
 });

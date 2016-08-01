@@ -4,7 +4,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import App from './containers/App';
 import Home from './containers/Home';
 import Setup from './containers/Setup';
-import BookList from './containers/BookList';
+import BookList from './components/BookList';
 
 export default (
     <Router history={hashHistory}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from 'chai';
+import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';

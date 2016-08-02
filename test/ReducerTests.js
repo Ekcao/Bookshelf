@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import books from '../app/reducers/Books';
+import filter from '../app/reducers/Filter';
 
 describe('Reducers', () => {
     describe('books', () => {
@@ -20,7 +21,7 @@ describe('Reducers', () => {
 
         it('remove book decreases length by 1', () => {
             var state = [
-                {title: 'Mistborn', author: 'Brandon Sanderson'}
+                { title: 'Mistborn', author: 'Brandon Sanderson' }
             ];
             var action = {
                 type: 'REMOVE_BOOK',
@@ -31,13 +32,33 @@ describe('Reducers', () => {
 
         it('does nothing if book is not in state', () => {
             var state = [
-                {title: 'Mistborn', author: 'Brandon Sanderson'}
+                { title: 'Mistborn', author: 'Brandon Sanderson' }
             ];
             var action = {
                 type: 'REMOVE_BOOK',
                 index: 2
             };
             expect(books(state,action)).to.have.lengthOf(1);
+        });
+    });
+
+    describe('filter', () => {
+        it('returns default state of \'SHOW ALL\'', () => {
+            expect(filter(undefined, { type: 'NONE'})).to.eql(
+                { filter: 'SHOW_ALL', arg: '' }
+            );
+        });
+
+        it('can filter by author', () => {
+            var action = {
+                type: 'SET_FILTER',
+                filter: 'BY_AUTHOR',
+                arg: 'Brandon Sanderson'
+            };
+
+            expect(filter(undefined, action)).to.eql(
+                { filter: 'BY_AUTHOR', arg: 'Brandon Sanderson' }
+            );
         });
     });
 });

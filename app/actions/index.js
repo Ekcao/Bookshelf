@@ -25,6 +25,10 @@ export const sortBooks = function() {
 
 };
 
-export const filterBooks = function(filter) {
-
+export const filterBooks = function(filter, arg = '') {
+    return {
+        type: 'SET_FILTER',
+        filter: filter,
+        arg: arg
+    };
 };

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { addBook, removeBook } from '../app/actions';
+import { addBook, removeBook, filterBooks } from '../app/actions';
 
 
 describe('Actions', () => {
@@ -32,8 +32,10 @@ describe('Actions', () => {
     });
 
     describe('filterBooks', () => {
-        it('passes this test', () => {
-            expect(true).to.be.true;
+        it('can have default arg of \'\'', () => {
+            expect(filterBooks('SHOW_ALL')).to.eql(
+                { type: 'SET_FILTER', filter: 'SHOW_ALL', arg: '' }
+            );
         });
     });
 });

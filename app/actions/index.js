@@ -1,34 +1,44 @@
-export const addBook = function(title, author) {
+export const ADD_BOOK = 'ADD_BOOK';
+export const REMOVE_BOOK = 'REMOVE_BOOK';
+export const SET_FILTER = 'SET_FILTER';
+
+export const Filters = {
+    SHOW_ALL: 'SHOW_ALL',
+    BY_AUTHOR: 'BY_AUTHOR',
+    BY_TITLE: 'BY_TITLE'
+};
+
+export function addBook(title, author) {
     if (author == null) {
         return {
-            type: 'ADD_BOOK',
+            type: ADD_BOOK,
             title: title,
             author: ''
         };
     } else {
         return {
-            type: 'ADD_BOOK',
+            type: ADD_BOOK,
             title: title,
             author: author
         };
     }
-};
+}
 
-export const removeBook = function(index) {
+export function removeBook(index) {
     return {
-        type: 'REMOVE_BOOK',
+        type: REMOVE_BOOK,
         index: index
     };
-};
+}
 
-export const sortBooks = function() {
+export function sortBooks() {
 
-};
+}
 
-export const filterBooks = function(filter, arg = '') {
+export function filterBooks(filter, arg = '') {
     return {
-        type: 'SET_FILTER',
+        type: SET_FILTER,
         filter: filter,
         arg: arg
     };
-};
+}

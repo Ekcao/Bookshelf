@@ -1,8 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Book from '../app/components/Book';
 

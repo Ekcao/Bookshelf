@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { addBook, removeBook, sortBooks, filterBooks } from '../app/actions';
+import { addBook, removeBook } from '../app/actions';
 
 
 describe('Actions', () => {
@@ -22,13 +22,13 @@ describe('Actions', () => {
         it('removes a book using index', () => {
             var action = removeBook(0);
             expect(action.type).to.equal('REMOVE_BOOK');
-        })
+        });
     });
 
     describe('sortBooks', () => {
         it('passes this test', () => {
             expect(true).to.be.true;
-        })
+        });
     });
 
     describe('filterBooks', () => {

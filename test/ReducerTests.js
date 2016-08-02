@@ -19,7 +19,9 @@ describe('Reducers', () => {
         });
 
         it('remove book decreases length by 1', () => {
-            var state = [{title: 'Mistborn', author: 'Brandon Sanderson'}];
+            var state = [
+                {title: 'Mistborn', author: 'Brandon Sanderson'}
+            ];
             var action = {
                 type: 'REMOVE_BOOK',
                 index: 0
@@ -28,7 +30,9 @@ describe('Reducers', () => {
         });
 
         it('does nothing if book is not in state', () => {
-            var state = [{title: 'Mistborn', author: 'Brandon Sanderson'}];
+            var state = [
+                {title: 'Mistborn', author: 'Brandon Sanderson'}
+            ];
             var action = {
                 type: 'REMOVE_BOOK',
                 index: 2

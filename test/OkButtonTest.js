@@ -1,6 +1,6 @@
 import React from 'react';
-import {expect} from 'chai';
-import { mount, shallow } from 'enzyme';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
 import OkButton from '../app/components/OkButton';
@@ -16,5 +16,5 @@ describe('<OkButton />', () => {
         const onClick = sinon.spy();
         wrapper.simulate('click');
         expect(onClick).to.have.property('callCount', 0);
-    })
+    });
 });

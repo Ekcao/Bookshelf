@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import Book from './Book'
+import Book from './Book';
 
 export default class BookList extends React.Component {
     render() {

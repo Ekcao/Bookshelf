@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import TextField from 'material-ui/TextField';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import OkButton from './OkButton';
 

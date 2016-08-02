@@ -20,4 +20,4 @@ export default class OkButton extends React.Component {
 // For testing
 OkButton.childContextTypes = {
     muiTheme: React.PropTypes.object.isRequired,
-}
+};

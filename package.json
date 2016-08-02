@@ -19,6 +19,7 @@
     "mocha": "^2.5.3",
     "node-sass": "^3.8.0",
     "react-addons-test-utils": "^15.2.0",
+    "react-addons-update": "^15.3.0",
     "sass-loader": "^4.0.0",
     "sinon": "^1.17.4",
     "webpack": "^1.13.1"

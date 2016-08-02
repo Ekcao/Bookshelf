@@ -1,8 +1,4 @@
 export const addBook = function(title, author) {
-    if (title == null) {
-        throw new Error("Null title");
-    }
-
     if (author == null) {
         return {
             type: 'ADD_BOOK',

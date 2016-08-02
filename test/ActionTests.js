@@ -11,10 +11,6 @@ describe('Actions', () => {
             expect(action.author).to.exist;
         });
 
-        it('must have title', () => {
-            expect(() => addBook(null, 'Brandon Sanderson')).to.throw('Null title');
-        });
-
         it('can have no author', () => {
             var action = addBook('Mistborn', null);
             expect(action.author).to.equal('');

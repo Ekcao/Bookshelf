@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import books from '../app/reducers/books';
+import books from '../app/reducers/Books';
 
 describe('Reducers', () => {
     describe('books', () => {

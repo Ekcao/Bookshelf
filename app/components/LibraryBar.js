@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import TextField from 'material-ui/TextField';
 
 import OkButton from './OkButton';
+import BrowseButton from './BrowseButton';
 
 export default class LibraryBar extends React.Component {
 
@@ -15,6 +16,7 @@ export default class LibraryBar extends React.Component {
                     floatingLabelText="Set directory for Bookshelf library"
                     floatingLabelFixed={true}
                     />
+                <BrowseButton />
                 <Link to="/book-list">
                     <OkButton />
                 </Link>

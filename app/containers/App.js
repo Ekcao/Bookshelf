@@ -3,7 +3,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import AppToolbar from '../components/AppToolbar';
 
-import '../../public/css/app.scss';
+import '../../public/css/App.scss';
 
 export default class App extends React.Component {
     getChildContext() {

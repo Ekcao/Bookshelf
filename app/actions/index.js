@@ -1,6 +1,7 @@
 export const ADD_BOOK = 'ADD_BOOK';
 export const REMOVE_BOOK = 'REMOVE_BOOK';
 export const SET_FILTER = 'SET_FILTER';
+export const SET_LIBRARY = 'SET_LIBRARY';
 
 export const Filters = {
     SHOW_ALL: 'SHOW_ALL',
@@ -40,5 +41,12 @@ export function filterBooks(filter, arg = '') {
         type: SET_FILTER,
         filter: filter,
         arg: arg
+    };
+}
+
+export function setLibrary(path) {
+    return {
+        type: SET_LIBRARY,
+        path: path
     };
 }

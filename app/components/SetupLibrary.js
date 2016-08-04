@@ -5,13 +5,13 @@ import TextField from 'material-ui/TextField';
 import OkButton from './OkButton';
 import BrowseButton from './BrowseButton';
 
-export default class LibraryBar extends React.Component {
+export default class SetupLibrary extends React.Component {
 
     render () {
         return (
-            <div id="library-bar">
+            <div id="setup-library">
                 <TextField
-                    className="library-bar-text-field"
+                    className="setup-library-text-field"
                     hintText="Path"
                     floatingLabelText="Set directory for Bookshelf library"
                     floatingLabelFixed={true}

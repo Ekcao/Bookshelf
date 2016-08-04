@@ -1,11 +1,11 @@
 import React from 'react';
 
-import LibraryBar from '../components/LibraryBar';
+import SetupLibrary from '../components/SetupLibrary';
 
 export default class Setup extends React.Component {
     render() {
         return (
-            <LibraryBar />
+            <SetupLibrary />
         );
     }
 }

@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import OkButton from '../app/components/ok-button';
+import OkButton from '../../app/components/ok-button';
 
 describe('<OkButton />', () => {
     var wrapper = null;

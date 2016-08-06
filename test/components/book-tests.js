@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import Book from '../app/components/book';
+import Book from '../../app/components/book';
 
 
 describe('<Book />', () => {

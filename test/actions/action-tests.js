@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as actions from '../app/actions';
+import * as actions from '../../app/actions';
 
 
 describe('Actions', () => {

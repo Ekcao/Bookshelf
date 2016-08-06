@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import books from '../app/reducers/books';
-import filter from '../app/reducers/filter';
-import setLibrary from '../app/reducers/library';
-import * as actions from '../app/actions';
+import books from '../../app/reducers/books';
+import filter from '../../app/reducers/filter';
+import setLibrary from '../../app/reducers/library';
+import * as actions from '../../app/actions';
 
 describe('Reducers', () => {
     describe('books', () => {

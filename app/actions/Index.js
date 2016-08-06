@@ -45,6 +45,7 @@ export function filterBooks(filter, arg = '') {
 }
 
 export function setLibrary(path) {
+    console.log(path);
     return {
         type: SET_LIBRARY,
         path: path

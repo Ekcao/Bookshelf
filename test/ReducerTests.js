@@ -63,17 +63,17 @@ describe('Reducers', () => {
         });
     });
 
-    describe('setLibrary', () => {
-        it('returns default state of \'\'', () => {
+    describe('library', () => {
+        it('returns default state of {}', () => {
             var action = setLibrary(undefined, { type: 'NONE' });
-            expect(action).to.equal('');
+            expect(action).to.eql({});
         });
 
-        it('returns state equal to path', () => {
+        it('returns state with path', () => {
             var action = setLibrary(undefined, {
                 type: actions.SET_LIBRARY, path: 'Path'
             });
-            expect(action).to.equal('Path');
+            expect(action.path).to.equal('Path');
         });
     });
 });

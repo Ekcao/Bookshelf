@@ -6,7 +6,7 @@ var {BrowserWindow} = require('electron');
 var mainWindow = null;
 
 app.on('ready', function() {
-    mainWindow = new BrowserWindow({height: 800, width: 1000});
+    mainWindow = new BrowserWindow({height: 1000, width: 1200});
 
     // BrowserWindow.addDevToolsExtension('C:\\Users\\Eric\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\fmkadmapgofadopljbjfkapdkoienihi\\0.15.0_0');
 

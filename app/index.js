@@ -4,7 +4,7 @@ import { Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import bookApp from './reducers';
-import Routes from './Routes';
+import Routes from './routes';
 import { addBook } from './actions';
 
 let store = createStore(bookApp);

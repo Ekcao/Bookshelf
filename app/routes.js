@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import App from './containers/App';
-import Home from './containers/Home';
-import Setup from './containers/Setup';
-import BookList from './components/BookList';
+import App from './containers/app';
+import Home from './containers/home';
+import Setup from './containers/setup';
+import BookList from './components/book-list';
 
 export default (
     <Route path="/" component={App}>

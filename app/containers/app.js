@@ -1,9 +1,9 @@
 import React from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import AppToolbar from '../components/AppToolbar';
+import AppToolbar from '../components/app-toolbar';
 
-import '../../public/css/App.scss';
+import '../../public/css/app.scss';
 
 export default class App extends React.Component {
     getChildContext() {

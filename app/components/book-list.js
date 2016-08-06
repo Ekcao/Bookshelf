@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Book from './Book';
+import Book from './book';
 
 export default class BookList extends React.Component {
     render() {

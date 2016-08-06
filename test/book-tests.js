@@ -3,16 +3,19 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import OkButton from '../app/components/OkButton';
+import Book from '../app/components/book';
 
-describe('<OkButton />', () => {
+
+describe('<Book />', () => {
     var wrapper = null;
 
     beforeEach(function() {
-        wrapper = shallow(<OkButton />);
+        wrapper = shallow(
+            <Book bookTitle="Mistborn" bookAuthor="Sanderson" />
+        );
     });
 
-    it('has an onclick', () => {
+    it('displays more info onclick', () => {
         const onClick = sinon.spy();
         wrapper.simulate('click');
         expect(onClick).to.have.property('callCount', 0);

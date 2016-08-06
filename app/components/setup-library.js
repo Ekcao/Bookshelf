@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import TextField from 'material-ui/TextField';
 
-import OkButton from './OkButton';
-import BrowseButton from './BrowseButton';
+import OkButton from './ok-button';
+import BrowseButton from './browse-button';
 
 export default class SetupLibrary extends React.Component {
     render () {

@@ -1,7 +1,7 @@
 'use strict';
 var { dialog } = require('electron').remote;
 
-import SetupLibrary from '../components/SetupLibrary';
+import SetupLibrary from '../components/setup-library';
 import { setLibrary } from '../actions';
 import { connect } from 'react-redux';
 

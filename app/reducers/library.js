@@ -5,7 +5,7 @@ export default function library(state = { path: '', noPath: true }, action) {
     case SET_LIBRARY:
         return {
             path: action.path,
-            noPath: false
+            noPath: action.noPath
         };
     default:
         return state;

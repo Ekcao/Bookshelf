@@ -63,9 +63,10 @@ describe('Actions', () => {
             expect(action.type).to.equal(actions.SET_LIBRARY);
         });
 
-        it('returns action with a path', () => {
+        it('returns action with a path and noPath', () => {
             var action = actions.setLibrary('Path');
             expect(action.path).to.equal('Path');
+            expect(action.noPath).to.be.false;
         });
     });
 });

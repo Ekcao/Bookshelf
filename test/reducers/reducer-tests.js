@@ -64,16 +64,17 @@ describe('Reducers', () => {
     });
 
     describe('library', () => {
-        it('returns default state of {}', () => {
+        it('returns default state of { path: \'\', noPath: true }', () => {
             var action = setLibrary(undefined, { type: 'NONE' });
-            expect(action).to.eql({});
+            expect(action).to.eql({ path: '', noPath: true });
         });
 
-        it('returns state with path', () => {
+        it('returns state with path and noPath', () => {
             var action = setLibrary(undefined, {
-                type: actions.SET_LIBRARY, path: 'Path'
+                type: actions.SET_LIBRARY, path: 'Path', noPath: false
             });
             expect(action.path).to.equal('Path');
+            expect(action.noPath).to.be.false;
         });
     });
 });

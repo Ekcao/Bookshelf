@@ -16,5 +16,5 @@ export default class OkButton extends React.Component {
 
 OkButton.propTypes = {
     onOkClick: PropTypes.func,
-    noPath: PropTypes.bool.isRequired
+    noPath: PropTypes.bool
 };

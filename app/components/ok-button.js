@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 export default class OkButton extends React.Component {
@@ -8,7 +8,13 @@ export default class OkButton extends React.Component {
             <RaisedButton
                 className="ok-button"
                 label="OK"
-                onClick={this.props.onOkClick}/>
+                onClick={this.props.onOkClick}
+                disabled={this.props.noPath}/>
         );
     }
 }
+
+OkButton.propTypes = {
+    onOkClick: PropTypes.func,
+    noPath: PropTypes.bool.isRequired
+};

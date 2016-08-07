@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import TextField from 'material-ui/TextField';
 
 import OkButton from './ok-button';
@@ -19,16 +18,21 @@ export default class SetupLibrary extends React.Component {
                 <BrowseButton
                     onBrowseClick={this.props.onBrowseClick}
                      />
-                <Link to="/book-list">
-                    <OkButton
-                        />
-                </Link>
+                <OkButton
+                    noPath={this.props.noPath}
+                    onOkClick={() => this.context.router.push('/book-list')}
+                    />
             </div>
         );
     }
 }
 
+SetupLibrary.contextTypes = {
+    router: PropTypes.object.isRequired
+};
+
 SetupLibrary.propTypes = {
     pathValue: PropTypes.string,
     onBrowseClick: PropTypes.func.isRequired,
+    noPath: PropTypes.bool.isRequired
 };

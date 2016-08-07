@@ -6,12 +6,13 @@ import { setLibrary } from '../actions';
 import { connect } from 'react-redux';
 
 function chooseLibrary() {
-    return dialog.showOpenDialog({ properties: ['openDirectory']});
+    return dialog.showOpenDialog({ properties: ['openDirectory']})[0];
 }
 
 function mapStateToProps(state) {
     return {
-        pathValue: state.library.path
+        pathValue: state.library.path,
+        noPath: state.library.noPath
     };
 }
 

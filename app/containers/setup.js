@@ -1,13 +1,7 @@
-'use strict';
-var { dialog } = require('electron').remote;
-
 import SetupLibrary from '../components/setup-library';
 import { setLibrary } from '../actions';
 import { connect } from 'react-redux';
-
-function chooseLibrary() {
-    return dialog.showOpenDialog({ properties: ['openDirectory']})[0];
-}
+import { selectLibraryPath } from '../util/renderer';
 
 function mapStateToProps(state) {
     return {
@@ -19,7 +13,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         onBrowseClick: () => {
-            dispatch(setLibrary(chooseLibrary()));
+            dispatch(setLibrary(selectLibraryPath()));
         }
     };
 }

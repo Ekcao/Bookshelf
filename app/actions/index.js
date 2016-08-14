@@ -9,18 +9,23 @@ export const Filters = {
     BY_TITLE: 'BY_TITLE'
 };
 
+let bookId = 0;
 export function addBook(title, author) {
     if (author == null) {
         return {
             type: ADD_BOOK,
+            id: bookId++,
             title: title,
-            author: ''
+            author: '',
+            cover: 'https://upload.wikimedia.org/wikipedia/en/4/44/Mistborn-cover.jpg'
         };
     } else {
         return {
             type: ADD_BOOK,
             title: title,
-            author: author
+            id: bookId++,
+            author: author,
+            cover: 'https://upload.wikimedia.org/wikipedia/en/4/44/Mistborn-cover.jpg'
         };
     }
 }

@@ -9,10 +9,12 @@ describe('Actions', () => {
             expect(action.type).to.equal(actions.ADD_BOOK);
         });
 
-        it('returns action with title and author', () => {
+        it('returns action with id, title, author, and cover', () => {
             var action = actions.addBook('Mistborn', 'Brandon Sanderson');
+            expect(action.id).to.equal(1);
             expect(action.title).to.equal('Mistborn');
             expect(action.author).to.equal('Brandon Sanderson');
+            expect(action.cover).to.equal('https://upload.wikimedia.org/wikipedia/en/4/44/Mistborn-cover.jpg');
         });
 
         it('returns action with no author', () => {

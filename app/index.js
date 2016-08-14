@@ -10,6 +10,7 @@ import { addBook } from './actions';
 // let store = createStore(bookApp);
 let store = createStore(bookApp, window.devToolsExtension && window.devToolsExtension());
 store.dispatch(addBook('Mistborn', 'Brandon Sanderson'));
+store.dispatch(addBook('Mistborn 2', 'Brandon Sanderson'));
 
 ReactDOM.render(
     <Provider store={store}>

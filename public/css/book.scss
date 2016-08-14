@@ -19,3 +19,12 @@
         @include ellipsize(146px);
     }
 }
+
+.book-list {
+    list-style: none;
+    padding: 16px;
+
+    .book-item {
+        display: inline;
+    }
+}

@@ -7,14 +7,15 @@ export default class BookList extends React.Component {
     render() {
         return (
             <div>
-                <ul>
+                <ul className="book-list">
                     {this.props.books.map(book =>
-                        <Book
-                            key={book.id}
-                            title={book.title}
-                            author={book.author}
-                            cover={book.cover}
-                        />
+                        <li className="book-item" key={book.id}>
+                            <Book
+                                title={book.title}
+                                author={book.author}
+                                cover={book.cover}
+                            />
+                        </li>
                     )}
                 </ul>
                 <AddBookFab onFabClick={() => console.log('FAB clicked')} />
@@ -25,6 +26,7 @@ export default class BookList extends React.Component {
 
 BookList.propTypes = {
     books: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
         cover: PropTypes.string

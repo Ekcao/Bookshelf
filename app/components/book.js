@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import {Card, CardHeader, CardMedia } from 'material-ui/Card';
+import { Card, CardHeader, CardMedia } from 'material-ui/Card';
 
 export default class Book extends React.Component {
 

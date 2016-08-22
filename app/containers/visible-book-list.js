@@ -1,5 +1,7 @@
 import BookList from '../components/book-list';
 import { connect } from 'react-redux';
+import { setLibrary } from '../actions';
+import { selectEpubPath } from '../util/renderer';
 
 function mapStateToProps(state) {
     return {
@@ -7,8 +9,17 @@ function mapStateToProps(state) {
     };
 }
 
+function mapDispatchToProps(dispatch) {
+    return {
+        onFabClick: () => {
+            dispatch(setLibrary(selectEpubPath()));
+        }
+    };
+}
+
 const VisibleBookList = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(BookList);
 
 export default VisibleBookList;

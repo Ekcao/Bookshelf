@@ -28,7 +28,7 @@ export default class SetupLibrary extends React.Component {
 }
 
 SetupLibrary.contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object
 };
 
 SetupLibrary.propTypes = {

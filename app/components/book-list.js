@@ -18,7 +18,7 @@ export default class BookList extends React.Component {
                         </li>
                     )}
                 </ul>
-                <AddBookFab onFabClick={() => console.log('FAB clicked')} />
+                <AddBookFab onFabClick={this.props.onFabClick} />
             </div>
         );
     }
@@ -30,5 +30,6 @@ BookList.propTypes = {
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
         cover: PropTypes.string
-    }).isRequired).isRequired
+    }).isRequired).isRequired,
+    onFabClick: PropTypes.func
 };

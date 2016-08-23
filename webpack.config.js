@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 module.exports = {
     entry: './app/index.js',
     output: {
@@ -24,6 +25,9 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new webpack.IgnorePlugin(/vertx/)
+    ],
     externals: {
         'cheerio': 'window',
         'react/addons': true,

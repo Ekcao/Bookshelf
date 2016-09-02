@@ -6,7 +6,6 @@ import { createStore } from 'redux';
 import bookApp from './reducers';
 import Routes from './routes';
 import { addBook } from './actions';
-import ePub from 'epubjs';
 
 // let store = createStore(bookApp);
 let store = createStore(bookApp, window.devToolsExtension && window.devToolsExtension());
@@ -19,8 +18,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
-
-var book = ePub('../../Mistborn - The Final Empire.epub');
-book.loaded.metadata.then(function(meta) {
-    console.log(meta.title);
-});
